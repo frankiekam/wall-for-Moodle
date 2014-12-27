@@ -1,0 +1,667 @@
+/* 
+Srinivas Tamada
+www.9lessons.info 
+Facebook Wall Script
+
+Modified and improved by Frankie Kam
+moodurian.blogspot.com
+*/
+
+/* What happens when you move the mouseover the comment textarea... */
+textarea.bright {
+/* background-color:#CCCCFF; */
+    border: /*#000000*/gray solid 1px;
+    transition: all 0.25s ease-in-out;
+    padding: 7px;
+    -webkit-box-shadow: inset 4px 4px 4px 0px #dddddd;
+    -moz-box-shadow: inset 4px 4px 4px 0px #dddddd;
+    box-shadow: inset 4px 4px 4px 0px #dddddd;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+@font-face {
+    font-family: Aight;
+	src: url('../fonts/aaaiight.ttf');
+}
+
+@font-face {
+    font-family: Acidic;
+	src: url('../fonts/Acidic.TTF');
+}
+
+@font-face {
+    font-family: Ballpark;
+	src: url('../fonts/BALLW___.TTF');
+}
+
+@font-face {
+    font-family: Chunkfive;
+	src: url('../fonts/Chunkfive.otf');
+}
+
+@font-face {
+    font-family: AaronHand;
+	src: url('../fonts/AaronHand.ttf');
+}
+
+@font-face {
+    font-family: SubwayGr;
+	src: url('../fonts/SUBWAYGR.TTF');
+}
+
+@font-face {
+    font-family: Graffito;
+	src: url('../fonts/GRAFFITO.TTF');
+}
+
+@font-face {
+    font-family: GraffitiPaintBrush;
+	src: url('../fonts/GraffitiPaintBrush.ttf');
+}
+
+@font-face {
+    font-family: Abite;
+	src: url('../fonts/ABITE.ttf');
+}
+
+@font-face {
+    font-family: Tosca;
+	src: url('../fonts/TOSCA___.otf');
+}
+
+@font-face {
+    font-family: Masterplan;
+	src: url('../fonts/MASTERPLAN___.ttf');
+}
+
+@font-face {
+    font-family: FontBubble;
+	src: url('../fonts/fontbubble.ttf');
+}
+
+@font-face {
+    font-family: Amsterdam;
+	src: url('../fonts/amsterdam.ttf');
+}
+
+@font-face {
+    font-family: Whoa;
+	src: url('../fonts/whoa!.ttf');
+}
+
+@font-face {
+    font-family: Thickhead;
+	src: url('../fonts/Thickhead_Dark.ttf');
+}
+
+@font-face {
+    font-family: StreetWriters;
+	src: url('../fonts/StreetWriters.ttf');
+}
+
+@font-face {
+    font-family: streetsoul;
+	src: url('../fonts/streetsoul.ttf');
+}
+
+@font-face {
+    font-family: Nosed;
+	src: url('../fonts/NOSED___.TTF');
+}
+
+@font-face {
+    font-family: LydiaPuente;
+	src: url('../fonts/LydiaPuente.ttf');
+}
+
+@font-face {
+    font-family: InstantMarker;
+	src: url('../fonts/InstantMarker.ttf');
+}
+
+@font-face {
+    font-family: DJGross;
+	src: url('../fonts/DJGROSS.ttf');
+}
+
+@font-face {
+    font-family: Zealot;
+	src: url('../fonts/zealot.ttf');
+}
+
+@font-face {
+    font-family: Spinc;
+	src: url('../fonts/SPINC___.TTF');
+}
+
+@font-face {
+    font-family: Spaceage;
+	src: url('../fonts/space_age.ttf');
+}
+
+@font-face {
+    font-family: Hardrock;
+	src: url('../fonts/HARD_ROCK.ttf');
+}
+
+@font-face {
+    font-family: ;
+	src: url('../fonts/');
+}
+
+@font-face {
+    font-family: ;
+	src: url('../fonts/');
+}
+
+@font-face {
+    font-family: Blomster;
+	src: url('../fonts/blomster.ttf');
+}
+
+@font-face {
+    font-family: Barbie;
+	src: url('../fonts/barbie.ttf');
+}
+
+#button {
+    cursor: pointer;
+    background-color: #D9F4C3;
+    ;
+  /* font-weight: bold; */
+  /* http://css3gen.com/text-shadow/ */
+  color: #000;
+    font-size: 12px;
+  /* height: 25px; */
+    width: 60px;
+    margin: 4px 0 0 0px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+  /* line-height: 25px; */
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  /* border: 5px solid #009900; */
+    padding-bottom: 2px;
+  /* padding: 2px;  */
+    padding: 7px;
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;
+}
+
+#button:hover {
+    margin-top: 0px;
+  /*Shadow*/
+    -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+  /*Gradient*/
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+#togglebutton {
+    cursor: pointer;
+    color: darkgray;
+ /* #526DA4; */
+    background: transparent;
+  /* text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);   */
+    font-size: 11px;
+    height: 22px;
+    width: 90px;
+    margin: 0px 0 0 2px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    border-style: solid;
+    border-color: transparent;
+    vertical-align: bottom;
+    outline: none;
+}
+
+#togglebutton:hover {
+    margin-top: 0px;
+    color: black;
+ /* #526DA4;  */;
+}
+
+button:focus {outline:0;}
+
+button {
+    border-bottom-color: #b3b3b3;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #b3b3b3;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #b3b3b3;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #b3b3b3;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    /* background-color: #00C20E; */
+	
+	/*
+	background-color: #D9F4C3;
+	color: black;
+	*/
+	
+ /*#526DA4;*/ /* #4D1700; */
+    border-bottom: 1px solid black;
+    border-left: 1px solid white;
+    border-right: 1px solid black;
+    border-top: 1px solid white;
+    /* color: #FBFBF5; */
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+ /* 11px */
+/* font-size:0.9em; */
+    width: auto;
+}
+
+div.button {
+    float: left;
+    border: 1px solid #8EC1DA;
+    background-color: #DDEEF6;
+    border-radius: 14.5px;
+    box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+    color: #3985a8;
+    /* text-shadow: 0 1px #fff; */
+    padding: 5px 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+div.togglebutton {
+    float: left;
+    border: 1px solid #8EC1DA;
+    background-color: #DDEEF6;
+    border-radius: 14.5px;
+    box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+    color: #3985a8;
+    /* text-shadow: 0 1px #fff; */
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h3,h4 {
+    padding: 0px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+a {
+    color: #006699;
+  /* The text "comment" and username */
+    text-decoration: none;
+}
+
+#wall_container {
+    text-align: left;
+/* background-color:#FFFFFF; */
+    background-color: transparent;
+    padding: 2px;
+    width: 550px;
+ /* 550 */
+/*opacity:0.5;*/;
+}
+
+#update /* Main input box! */ {
+    height: 100px;
+    width: 550px;
+    font-size: 14px;
+ /* 550 */
+    opacity: 1;
+}
+
+#content {
+    margin-top: 10px;
+}
+
+textarea {
+    border: solid 1px gray;
+	/* Feb 2013 */
+    transition: all 0.25s ease-in-out;
+    outline: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 7px;
+    -webkit-box-shadow: inset 4px 4px 4px 0px #dddddd;
+    -moz-box-shadow: inset 4px 4px 4px 0px #dddddd;
+    box-shadow: inset 4px 4px 4px 0px #dddddd;
+}
+
+/* Comment textarea colour */
+textarea:focus {
+    background-color: #F4F7C1;
+    color: black;
+    border: gray solid 0.5px;
+    font-size: 16px;
+}
+
+textarea:blur {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+
+
+/* status body */
+
+.stbody {
+    margin-bottom: 10px;
+/* border-bottom:dashed 1px #dedede; */  /* Line dashes removed by Frankie Kam on 30/10/2014. */
+/* overflow:auto; */;
+}
+
+.stimg /* Large User icon on the left! */ {
+    float: left;
+    height: 50px;
+    width: 50px;
+    border: solid 2px #dedede;
+/* border: 0; */
+    padding: 3px;
+}
+
+.sttext {
+    margin-left: 70px;
+    min-height: 50px;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 5px;
+    display: block;
+    width: 450px;
+ /* 470 */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Time ago secs, mins of post */
+.sttime {
+    font-size: 11px;
+/* color:#999; */
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+.stdelete {
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    background: url(images/trashdull.png);
+    display: none;
+    height: 0px;
+    width: 10px;
+}
+
+.stbody:hover .stdelete {
+    display: block;
+}
+
+.stdelete:hover {
+    background: url(images/trash.png);
+}
+
+#stexpandbox {
+    margin-top: 10px;
+}
+
+#stexpandbox img {
+    border: solid 1px #dedede;
+    padding: 3px;
+}
+
+/* Comment */
+.stcommentbody  /* comments that are loaded up, including images */ {
+    border-bottom: solid 1px #fff;
+/*
+background-color:#f2f2f2;
+*/
+    background-color: transparent;
+    padding: 5px;
+    width: 440px;
+ /* Previously 440px*/
+/*overflow:auto;*/;
+}
+
+.stcommentimg  /* User icon on the left */ {
+    float: left;
+    height: 35px;
+    width: 35px;
+    border: solid 1px #dedede;
+    padding: 2px;
+    vertical-align: left;
+    display: block;
+}
+
+
+/* Main Comment edit box */
+
+.stcommenttext {
+    margin-left: 45px;
+    min-height: 40px;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 3px;
+    display: block;
+    font-size: 14px;
+    width: 390px;
+    background-color: transparent;
+}
+
+.stcommenttext b {
+    color: #006699;
+    background-color: transparent;
+}
+
+.stcommenttime {
+    font-size: 12px;
+/*color:#999;*/
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2px;
+}
+
+.stcommentdelete {
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    display: none;
+/*background:url(trash.png);*/
+    height: 0px;
+    width: 20px;
+}
+
+.stcommenttext:hover .stcommentdelete {
+    display: block;
+}
+
+.stcommentdelete:hover {
+    background: url(images/trash.png);
+    height: 24px;
+    width: 24px;
+}
+
+.commentupdate {
+ /* the area for the input box */
+/* background-color:#f2f2f2; */
+    width: 440px;
+  /* Previously 440 460*/
+    padding: 5px;
+    background-color: transparent;
+}
+
+.comment {
+ /* the input box with lower right hand corner mini lines */
+    width: 390;
+   /* Previously 390 410*/
+    height: 36px;
+    font-size: 12px;
+}
+/* faceb image*/
+.small_face {
+    width: 35px;
+    height: 35px;
+}
+
+.big_face {
+    width: 50px;
+    height: 50px;
+}
+
+#flashmessage {
+    height: 15px;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #333;
+}
+
+.td img {
+    vertical-align: bottom;
+    opacity: 0.6;
+}
+
+/* Comment button colours. */
+input[type="submit"], 
+input[type="button"] {
+    cursor: pointer;
+    background-color: #F4F7C1;
+    font-size: 12px;
+    width: 70px;
+    margin: 4px 0 0 0px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding-top: 2px;
+    padding: 2px;
+}
+
+input[type="submit"]:hover, 
+input[type="button"] :hover {
+    margin-top: 4px;
+    -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+.push_share_button {
+    position: relative;
+    width: 40px;
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: solid 1px #A6BB48;
+/* #D94E3B; */
+    background: #A6BB48;
+/* #cb3b27; */
+    text-align: center;
+    padding: 5px 10px;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+    -webkit-box-shadow: 0px 7px 0px #71742E;
+/* #84261a; */
+    -moz-box-shadow: 0px 7px 0px #71742E;
+    box-shadow: 0px 7px 0px #71742E;
+    ;
+}
+/* http://www.paulund.co.uk/create-a-css-3d-push-button */
+.push_share_button:active {
+    color: #FFF;
+	/* background: #A6BB48;*//* #cb3b27; */
+    -webkit-box-shadow: 0px 2px 0px #71742E;
+    -moz-box-shadow: 0px 2px 0px #71742E;
+    box-shadow: 0px 2px 0px #71742E;
+    position: relative;
+    top: 5px;
+}
+
+.push_share_button:hover {
+    background: #96AF41;
+/* #cb3b27; */;
+}
+
+
+/* Added by Frankie on 30th October 2014 to remove the hover gray effect over course activities and front page activities for the Wall! */
+/* This CSS code must be put in the theme's CSS file, or the custom CSS for the current chosen theme. */
+.sitetopic .section .activity:hover, .course-content .section .activity:hover {background: none;!important}
+
+
+
+.fancy {
+ border: solid 1px gray;
+  padding: 7px;
+  -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  box-shadow: inset 2px 2px 2px 0px #dddddd; 
+}
+
+
+
+
+img.grayscale {
+    /*
+	float:left;
+    height:35px;
+    width:35px;
+    border:solid 1px #dedede;
+    padding:2px;
+    vertical-align: left;
+    display:block; 
+	*/
+
+    /*width:50px;height:50px;*/
+	opacity : 0.6;
+    position:relative;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+img.grayscale:hover {
+    opacity : 1.0;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}

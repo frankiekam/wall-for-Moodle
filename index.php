@@ -10,6 +10,7 @@
 
 */
 -->
+
 <?php
 $wcid = (int)$_GET['CourseId'];
 $id = (int)$_GET['Id'];

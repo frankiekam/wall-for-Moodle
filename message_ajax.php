@@ -80,8 +80,7 @@ if($WordStats)
     $updateText = $update;
 	$Flesch_Score = $statistics->flesch_kincaid_reading_ease($updateText);
 	
-	$statsText = '<br><font size="-1">Stats: </font><font size="-1" color="'.$StringWordColor.'">'.$wordCount
-	.$text1.'</font>,<font size="-1" color="'.$StringSentColor.'"> '.$sentenceCount.$text2.'</font><font size="-1" color="darkblue">, '.$value.$text3.'ps. </font>';
+	$statsText = '<br><font size="-1">Stats: </font><font size="-1" color="'.$StringWordColor.'">'.$wordCount.$text1.'</font>'.",".'<font size="-1" color="'.$StringSentColor.'"> '.$sentenceCount.$text2.'</font><font size="-1" color="darkblue">, '.$value.$text3.'ps. </font>';
 	
 	
 	
@@ -120,7 +119,8 @@ if($WordStats)
 	 
 		/* Add the statistics to the message! */
 		$token = explode(":mode:",$update);	
-        $update = $token[0].$statsText;
+        $update = $token[0].$statsText.":mode:".$token[1];
+		
 }
 		
 	$data = $Wall->Insert_Update($wcid, $uid, $id, $update);
@@ -134,6 +134,8 @@ if($WordStats)
 		   $textOnly = (int)$token[1]; //Media format
 		else
 		   $textOnly = 0;  //Plain text format
+
+		//echo '$textOnly is '.$textOnly;
 		   
 		$message = $token[0];
 		$message = str_replace("&acirc;€”", "-", $message);
@@ -556,6 +558,7 @@ if($WordStats)
 
 				$message = str_replace('&Acirc;', '&nbsp;', $message);
 				$message = str_replace('@@@@', '&', $message);
+				$message = tolink(htmlentities(nl2br($message)));
 			}
 			else {
 				$message = str_replace('&Acirc;', '&nbsp;', $message);

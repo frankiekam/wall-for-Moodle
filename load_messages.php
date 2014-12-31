@@ -1,3 +1,4 @@
+<!-- wall -->
 <script type="text/javascript">
 function setSelectionRange(input, selectionStart, selectionEnd) {
   if (input.setSelectionRange) {
@@ -77,6 +78,9 @@ foreach((array)$updatesarray as $data) {
 	   $textOnly = (int)$token[1]; //Media format
 	else
 	   $textOnly = 0;  //Plain text format
+	
+	
+	//echo '$textOnly is '.$textOnly;
 	
 	$message = $token[0];
 	$message = str_replace("&acirc;€”", "-", $message);
@@ -324,7 +328,7 @@ foreach((array)$updatesarray as $data) {
 				else {
 					/* Embed an image! */
 					/* Embed an image! */
-					$imgsrc = "";
+					//$imgsrc = "";
 					
 					$beg = stripos($message, "http://");
 					if ($beg === false) $beg = stripos($message, "www.");
@@ -333,6 +337,7 @@ foreach((array)$updatesarray as $data) {
 					$checker = stripos($message, "img src");
 					if ($checker !== false) {
 						$message = nl2br($message);
+						//$message = tolink(htmlentities(nl2br($message)));
 					}
 					else {
 						if ($beg !== false) {
@@ -354,6 +359,7 @@ foreach((array)$updatesarray as $data) {
 						$target = " onclick=\"window.open(this.href,\\'_blank\\');return false;\"";
 						$message = preg_replace("#(^|[\n \]])([\w]+?://[\w\#$%&~/.\-;:=,?@+]*)#ise", "'\\1<insertimage><P><center><a href=\'" . $imgsrc . "\'" . $target . "><img src=\'\\2\' width=\'" . $width . "\'></img></a></center></insertimage>'", $message);
 						$message = nl2br($message);
+						//$message = tolink(htmlentities(nl2br($message)));
 					}
 				}
 			}
@@ -442,9 +448,9 @@ foreach((array)$updatesarray as $data) {
 			$code = str_replace("<div>", "<br />", $code);
 			$code = str_replace("</div>", "", $code);
 
-			// $code = "";
-			// $message=$first."<p>".$code;
-			// $message=tolink(htmlentities(nl2br($oriMesg)))."<p>".$code;
+			//$code = "";
+			//$message=$first."<p>".$code;
+			//$message=tolink(htmlentities(nl2br($oriMesg)))."<p>".$code;
 
 			$message = $code;
 		}
@@ -501,7 +507,7 @@ $(document).ready(function(){$("#stexpand<?php
 		}
 	}
 
-	if (($uid == $USER->id) || ($isadmin == true)) echo '<img width="14" style="border:none;" src="images/trash.png" class="shakeimage" onMouseover="init(this);top.focus()">';
+	if (($uid == $USER->id) || ($isadmin == true)) echo '<img width="14" style="border:none;" src="images/trash.png" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onMouseover="init(this);top.focus()">';
 	else echo "";
 ?></a>
 

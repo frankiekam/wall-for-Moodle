@@ -97,6 +97,7 @@ $(document).ready(function()
         {
            var data = $("#peterText").val();
 		   
+		   
 		   //data = encode_utf8(data); 
 		   
 		   //alert("Data is "+data);
@@ -117,6 +118,7 @@ $(document).ready(function()
 		   //data = data.replace(/(<([^>]+)>)/ig,"");
 		   
 		   $('#peterText').val(null)
+		   $('#peterText').height(50);
 		   //alert("!area1");
 		   //alert("Data is "+data);
         } else {
@@ -125,6 +127,8 @@ $(document).ready(function()
 				 var data = $("#peterText").val();
 				 //alert("data is "+data);
 				 $('#peterText').val(null)
+				 $('#peterText').height(50);
+				 
 				 //var data = nicEditors.findEditor('peterText').getContent();
                  /* var data = $('#peter').find('.nicEdit-main').text(); */
 				 //alert("Data is "+data);			 

@@ -6,6 +6,15 @@ Facebook Wall Script
 Modified and improved by Frankie Kam
 moodurian.blogspot.com
 */
+iframe{
+    background-color: transparent;
+}
+
+html {
+background-color: transparent;
+background: transparent;
+}
+
 
 /* What happens when you move the mouseover the comment textarea... */
 textarea.bright {

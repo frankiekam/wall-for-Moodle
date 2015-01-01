@@ -104,8 +104,8 @@ $(document).ready(function()
 		   //If not for the code below, the '+' symbol would have disappeard.
 		   
 			data = data.replace(/[&]nbsp[;]/gi," "); 
-			data = data.replace(/\+/g, "zx81plus");
-			data = data.replace(/\&/g, "zorilla");
+			data = data.replace(/\+/g, "qxq");
+			data = data.replace(/\&/g, "kxk");
 			data = data.replace(/[&]Acirc[;]/gi," "); 
 		    data = data.replace(/[&]lt[;]/gi,"<"); 
 		    data = data.replace(/[&]gt[;]/gi,">"); 
@@ -135,7 +135,7 @@ $(document).ready(function()
 				 
 				 
 				 data = data.replace(/[&]nbsp[;]/gi," "); 
-				 data = data.replace(/\+/g, "zx81plus");
+				 data = data.replace(/\+/g, "qxq");
 				 data = data.replace(/[&]Acirc[;]/gi," "); 
 		         data = data.replace(/[&]lt[;]/gi,"<"); 
 		         data = data.replace(/[&]gt[;]/gi,">"); 
@@ -243,7 +243,7 @@ $('.comment_button').live("click",function()
 {
    var ID = $(this).attr("id");
    var comment= $("#ctextarea"+ID).val();
-   comment = comment.replace(/\+/g, "zx81plus");
+   comment = comment.replace(/\+/g, "qxq");
    
    cleanText = comment.replace(/<\/?[^>]+(>|$)/g, "");
    flag = cleanText.replace(/\s/g, '');
@@ -253,8 +253,8 @@ $('.comment_button').live("click",function()
    }
    else
    {  
-	  comment = comment.replace(/\+/g, "zx81plus");
-	  comment = comment.replace(/\&/g, "zorilla");
+	  comment = comment.replace(/\+/g, "qxq");
+	  comment = comment.replace(/\&/g, "kxk");
       comment = comment.replace(/[&]nbsp[;]/gi," "); 
       comment = comment.replace(/[&]Acirc[;]/gi," "); 
       comment = comment.replace(/[&]lt[;]/gi,"<"); 

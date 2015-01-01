@@ -89,6 +89,7 @@ foreach((array)$updatesarray as $data) {
 	$message = str_replace("&acirc;€œ", "'", $message);
 	$message = str_replace("&acirc;€", "'", $message);
 	$message = str_replace("&", "kxk", $message);
+	//$message = str_replace("+", "zxz", $message);
 	$message = str_replace('  ', ' &nbsp;', $message);
 	$message = str_replace('	', '&nbsp;&nbsp;&nbsp;&nbsp;', $message);
 	$message = str_replace("\t", '&nbsp;&nbsp;&nbsp;', $message);
@@ -512,7 +513,7 @@ $(document).ready(function(){$("#stexpand<?php
 ?></a>
 
 <?php
-	$message = str_replace("xzx", "&", $message);
+	$message = str_replace("kxk", "&", $message);
 	$message = str_replace('qxq', '+', $message);
 	$message = str_replace('&gt;', '>', $message);
 	$message = str_replace('&lt;', '<', $message);

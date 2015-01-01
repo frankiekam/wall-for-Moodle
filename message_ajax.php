@@ -45,7 +45,7 @@ $Desc = !isset($_GET["Desc"]) ? "The Wall" : $_GET["Desc"];
 if (isSet($_POST['update'])) {
 	$update = addslashes($_POST['update']);
 	$update = str_replace("qxq", "+", $update);
-	$update = str_replace("xzx", "&", $update);
+	$update = str_replace("kxk", "&", $update);
 	$username = $USER->firstname . ' ' . $USER->lastname;
 
 $token = explode(":mode:",$update);	
@@ -144,6 +144,7 @@ if($WordStats)
 		$message = str_replace("&acirc;€œ", "'", $message);
 		$message = str_replace("&acirc;€", "'", $message);
 		$message = str_replace("&", "kxk", $message);
+		$message = str_replace("+", "qxq", $message);
 		$message = str_replace('  ', ' &nbsp;', $message);
 		$message = str_replace('	', '&nbsp;&nbsp;&nbsp;&nbsp;', $message);
 		$message = str_replace("\t", '&nbsp;&nbsp;&nbsp;', $message);
@@ -535,7 +536,7 @@ if($WordStats)
 <?php
 
 
-		$message = str_replace("xzx", "&", $message);
+		$message = str_replace("kxk", "&", $message);
 		$message = str_replace('qxq', '+', $message);
 		$message = str_replace('&gt;', '>', $message);
 		$message = str_replace('&lt;', '<', $message);

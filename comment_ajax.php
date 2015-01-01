@@ -337,7 +337,7 @@ if (isSet($_POST['comment'])) {
 ?>
  
  <?php
-		$comment = str_replace("xzx", "&", $comment);
+		$comment = str_replace("kxk", "&", $comment);
 		$comment = str_replace('qxq', '+', $comment);
 		$comment = str_replace('&gt;', '>', $comment);
 		$comment = str_replace('&lt;', '<', $comment);

@@ -18,7 +18,7 @@ foreach((array)$commentsarray as $cdata) {
 	$comment = str_replace('  ', ' &nbsp;', $comment);
 	$comment = str_replace('	', '&nbsp;&nbsp;&nbsp;&nbsp;', $comment);
 	$comment = str_replace("\t", '&nbsp;&nbsp;&nbsp;', $comment);
-	$comment = str_replace("xzx", "&", $comment);
+	$comment = str_replace("kxk", "&", $comment);
 	$comment = str_replace('qxq', '+', $comment);
 	$comment = str_replace('&gt;', '>', $comment);
 	$comment = str_replace('&lt;', '<', $comment);
